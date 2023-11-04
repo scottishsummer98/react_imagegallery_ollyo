@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const Home = () => {
-  const [selectedImageIndices, setSelectedImageIndices] = useState([]);
   const [images, setImages] = useState([
     { id: "1", src: require("../images/image-1.webp") },
     { id: "2", src: require("../images/image-2.webp") },
@@ -15,6 +14,7 @@ const Home = () => {
     { id: "10", src: require("../images/image-10.jpeg") },
     { id: "11", src: require("../images/image-11.jpeg") },
   ]);
+  const [selectedImageIndices, setSelectedImageIndices] = useState([]);
 
   const toggleImageSelection = (index) => {
     if (selectedImageIndices.includes(index)) {
@@ -71,9 +71,7 @@ const Home = () => {
               {selectedImageIndices.length} files selected
             </div>
             <div className="action_container_buttons">
-              {selectedImageIndices.length > 1 ? (
-                ""
-              ) : (
+              {selectedImageIndices.length > 1 ? null : (
                 <>
                   <button
                     className="move_btn"
@@ -97,9 +95,7 @@ const Home = () => {
           </div>
           <hr />
         </>
-      ) : (
-        ""
-      )}
+      ) : null}
 
       {images.length > 0 ? (
         <div className="gallery_container">

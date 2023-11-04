@@ -96,6 +96,10 @@
 
 /* Media Queries Small Devices*/
 @media screen and (max-width: 600px) {
+  .home_container {
+    border: 1px solid white;
+    padding: 1rem;
+  }
   .gallery_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -121,23 +125,30 @@
     width: 5rem;
   }
   .move_btn {
-    padding: 7px;
-    font-size: medium;
+    padding: 5px;
+    font-size: small;
     color: white;
     background-color: #007bff;
     border: 1px solid transparent;
     border-radius: 10px;
   }
   .delete_btn {
-    padding: 7px;
-    font-size: medium;
+    padding: 5px;
+    font-size: small;
     color: white;
     background-color: red;
     border: 1px solid transparent;
     border-radius: 10px;
   }
+  .actions_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
   .action_container_text {
-    font-size: medium;
+    font-size: small;
   }
   .gallery_image_single.selected {
     border: 3px solid red;
